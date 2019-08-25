@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/formula_linearlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical"
+    tools:context="com.aswdc_chemistryformula.Design.Activity_Formula">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/formula_tv_for"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Formula:"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="@color/black" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:background="@color/lwhite">
+
+                    <io.github.kexanie.library.MathView
+                        android:id="@+id/formula_mv_formula"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        android:layout_weight="1"
+                        android:background="@color/lwhite"
+
+                        android:textAppearance="?android:textAppearanceMedium"
+                        auto:engine="MathJax" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/formula_tv_des"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Description:"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+
+            <io.github.kexanie.library.MathView
+                android:id="@+id/formula_mv_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:visibility="gone"
+                auto:engine="MathJax">
+
+            </io.github.kexanie.library.MathView>
+
+
+            <WebView
+                android:id="@+id/formula_wv_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="7dp"
+                android:background="@color/lwhite"></WebView>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

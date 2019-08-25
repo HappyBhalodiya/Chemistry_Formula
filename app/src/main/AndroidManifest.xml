@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.aswdc_chemistryformula">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_chem3"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Design.Activity_Splash"
+            android:theme="@style/splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Design.Activity_Dashboard"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="com.aswdc_chemistry_formula_DASHBOARDACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Design.Activity_SubTopic"
+            android:parentActivityName=".Design.Activity_Dashboard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Design.Activity_Formula"
+            android:parentActivityName=".Design.Activity_SubTopic"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Design.Activity_Developer"
+            android:parentActivityName=".Design.Activity_Dashboard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Design.Activity_Search"
+            android:parentActivityName=".Design.Activity_Dashboard" />
+        <activity
+            android:name=".Design.Activity_Favourite"
+            android:parentActivityName=".Design.Activity_Dashboard" />
+        <activity android:name=".Design.Activity_Molecular"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical"
+    tools:context="com.aswdc_chemistryformula.Design.Activity_Dashboard">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/lwhite"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_margin="5dp">
+
+
+            <EditText
+                android:id="@+id/dashboard_et_search"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="@color/lwhite"
+                android:hint="Search..."
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/dashboard_btn_searchmain"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_margin="10dp"
+                android:background="@mipmap/ic_search2" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/linear_list"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/dashboard_btn_cf"
+                    style="@style/dashboard_btn"
+                    android:drawableTop="@mipmap/ic_cf"
+                    android:text="Chemical Formula" />
+
+
+                <Button
+                    android:id="@+id/dashboard_btn_gl"
+                    style="@style/dashboard_btn"
+                    android:drawableTop="@mipmap/ic_gaslaw1"
+                    android:text="Gas Law" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_list1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/dashboard_btn_concepts"
+                    style="@style/dashboard_btn"
+                    android:drawableTop="@mipmap/ic_concept"
+                    android:text=" Concepts" />
+
+
+                <Button
+                    android:id="@+id/dashboard_btn_qr"
+                    style="@style/dashboard_btn"
+                    android:drawableTop="@mipmap/ic_quickrefer"
+                    android:text="Quick Reference" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/dashboard_btn_favourite"
+                    style="@style/dashboard_btn"
+                    android:drawableTop="@mipmap/ic_fav_dark"
+                    android:text="Favourite" />
+
+
+                <!--<Button-->
+                    <!--android:id="@+id/dashboard_btn_molecular"-->
+                    <!--style="@style/dashboard_btn"-->
+                    <!--android:drawableTop="@mipmap/ic_concept"-->
+                    <!--android:text="Calculate" />-->
+
+
+                <Button
+                    android:id="@+id/dashboard_btn_periodictable"
+                    style="@style/dashboard_btn"
+                    android:drawableTop="@mipmap/ic_p_logo"
+                    android:text="Periodic Table" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+
+
+
+                <Button
+                    android:id="@+id/dashboard_btn_developer"
+                    style="@style/dashboard_btn"
+                    android:drawableTop="@mipmap/ic_developer3"
+                    android:text=" Developer" />
+
+                <Button
+                    android:id="@+id/dashboard_btn_share"
+                    style="@style/dashboard_btn"
+                    android:drawableTop="@mipmap/ic_sharedash"
+                    android:text="Share" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
